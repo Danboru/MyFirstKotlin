@@ -24,7 +24,7 @@ class MainActivity : Activity(){
             val b: String = edt2.text.toString()
 
             if(edt1.text.isEmpty() && edt2.text.isEmpty()){
-                Toast.makeText(applicationContext,"silahkan isi", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Pastikan Semua Terisi", Toast.LENGTH_SHORT).show()
             } else {
                 val c = a.toInt()
                 val d = b.toInt()
@@ -34,7 +34,7 @@ class MainActivity : Activity(){
         }
 
         btnKurang.setOnClickListener {
-            v ->  kurang()
+            pengurangan ->  kurang()
         }
 
         btnKali.setOnClickListener {
@@ -64,7 +64,8 @@ class MainActivity : Activity(){
         return a * b
     }
 
-    fun getEdt1(): Int {
+    fun getEdt1() : Int {
+
         val edt1 = findViewById(R.id.edt_satu) as EditText
         val a: String = edt1.text.toString()
         return a.toInt()
